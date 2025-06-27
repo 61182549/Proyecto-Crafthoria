@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crafthoria - Personalización</title>
+  <link rel="stylesheet" href="stylesPersonalizacion.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <div class="header">
+    <h1>Crafthoria</h1>
+    <div class="nav">
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Personalización</a>
+      <a href="#">Blog</a>
+      <a href="#">Contacto</a>
+    </div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="custom-container">
+    <h2>Personaliza tu producto soñado</h2>
+    <p class="sub-text">Elige materiales, forma, tamaño y deja tu huella en cada detalle.</p>
+
+    <div class="form-preview-wrapper">
+      <form class="custom-form">
+        <label for="tipo">Tipo de producto</label>
+        <select id="tipo">
+          <option>Cuadro</option>
+          <option>Placa decorativa de metal</option>
+          <option>Cojín personalizado</option>
+        </select>
+
+        <label for="material">Color / material</label>
+        <select id="material">
+          <option>Madera clara</option>
+          <option>Madera oscura</option>
+          <option>Bambú</option>
+          <option>Acero inoxidable</option>
+          <option>Textil bordado</option>
+        </select>
+
+        <label for="tamano">Tamaño</label>
+        <select id="tamano">
+          <option>Pequeño</option>
+          <option>Mediano</option>
+          <option>Grande</option>
+        </select>
+
+        <label for="texto">Texto personalizado</label>
+        <input type="text" id="texto" placeholder="Ej: Ana y Carlos" />
+
+        <label for="imagen">Subir imagen</label>
+        <input type="file" id="imagen" />
+
+        <button type="submit">Enviar pedido</button>
+      </form>
+
+      <div class="preview">
+        <p>Vista previa:</p>
+        <div class="preview-box">Ana y Carlos</div>
+      </div>
+    </div>
+
+    <h3>Inspiración</h3>
+     <div class="inspiration">
+     <img src="https://s.alicdn.com/@sc04/kf/H899fd8eb483b4452bc05b1dc5fe0f3513.jpg_300x300.jpg" alt="Placa metálica personalizada">
+     <img src="https://www.lavidaesalgomas.com/19764/cojin-personalizado-parejas-te-quiero-con-foto-nombres-y-fecha.jpg" alt="Cojín personalizado para parejas">
+     <img src="https://saquitomagico.com/cdn/shop/products/marco_fotos_madera_color_amor_locura_Saquito_Magico_1024x1024.jpg?v=1675253490" alt="Marco de madera grabado">
+</div>
+  </div>
+
+</body>
+</html>
