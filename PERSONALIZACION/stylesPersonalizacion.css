@@ -1,0 +1,156 @@
+/* Fuente y colores base */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Encabezado */
+.header {
+  background-color: #d8bba9;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #200202;
+  font-weight: bold;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #200202;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* Contenedor principal */
+.custom-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-container h2 {
+  color: #200202;
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 5px;
+}
+
+.sub-text {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 1.1em;
+}
+
+/* Formulario y vista previa */
+.form-preview-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Formulario */
+.custom-form {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.custom-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #200202;
+}
+
+.custom-form select,
+.custom-form input[type="text"],
+.custom-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+/* Botón */
+.custom-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #7d7777;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-form button:hover {
+  background-color: #200202;
+}
+
+/* Vista previa */
+.preview {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.preview p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #200202;
+}
+
+.preview-box {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  height: 250px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 1.2em;
+}
+
+/* Galería de inspiración */
+.custom-container h3 {
+  text-align: center;
+  margin-top: 40px;
+  color: #200202;
+}
+
+.inspiration {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.inspiration img {
+  width: 50%;
+  max-width: 240px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
