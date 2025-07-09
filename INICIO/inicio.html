@@ -1,67 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crafthoria - Página de Inicio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
-    <link rel="stylesheet" href="stylesinicio.css"> <!-- Enlace al archivo CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crafthoria - Página de Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesinicio.css">
 </head>
 <body>
 
-<div class="header">
+  <div class="header">
     <h1>Crafthoria</h1>
     <div class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Productos</a>
-        <a href="#">Personalización</a>
-        <a href="#">Blog</a>
-        <a href="#">Contacto</a>
+     <a href="../INICIO/inicio.html">Inicio</a>
+     <a href="../PRODUCTOS/productos.html">Productos</a>
+     <a href="../PERSONALIZACION/personalizacion.html">Personalización</a>
+     <a href="../BLOG/blog.html">Blog</a>
+     <a href="../CONTACTOS/contacto.html">contactos</a>
+     <a href="../REGISTRO/registro.html">registro</a>
     </div>
-</div>
+  </div>
 
-<div class="banner">
+  <div class="banner">
     <div class="search-bar">
-        <input type="text" placeholder="Buscar productos...">
-        <button>Buscar</button>
+      <input type="text" placeholder="Buscar productos...">
+      <button>Buscar</button>
     </div>
-    
-    <h2>TRANSFORMA TU HOGAR</h2>
-    <a href="#" class="explore-button">Explora nuestros productos</a>
-</div>
 
-<div class="container">
+    <h2>TRANSFORMA TU HOGAR</h2>
+    <a href="../PRODUCTOS/Productos.html" class="explore-button">Explora nuestros productos</a>
+  </div>
+
+  <div class="container">
+   <!-- BOTÓN DE REGALO -->
+     <div class="mensaje-container">
+     <button id="mostrar-mensaje" class="gift-button" title="Haz clic para un mensaje especial 🎁">🎁</button>
+     <p id="mensaje-motivador"></p>
+     </div>
+
     <h2>Nuevos productos</h2>
-    <div class="product-grid">
-        <div class="product">
-               <img src="img/cuadro-madera.jpg" alt="Cuadro tallado en madera" class="product-img">
-             <h3>Cuadro tallado en madera</h3>
-             <p>Cuadro artesanal tallado a mano con detalles geométricos. Ideal para decorar salas o estudios con estilo rústico.</p>
-             <p>Precio: S/. 60.00</p>
-             <button>Añadir al Carrito</button>
-        </div>
-        <div class="product">
-              <img src="img/portavasos.jpg" alt="Portavasos de madera grabado" class="product-img">
-             <h3>Portavasos de madera grabado</h3>
-             <p>Set de 4 piezas de madera natural con grabados únicos. Elegante y funcional para el día a día.</p>
-             <p>Precio: S/. 25.00</p>
-             <button>Añadir al Carrito</button>
-        </div>
-        <div class="product">
-             <img src="img/soporte-bambu.jpg" alt="Soporte para celular de bambú" class="product-img">
-             <h3>Soporte para celular de bambú</h3>
-             <p>Ligero, ecológico y resistente. Perfecto para escritorio, hecho de bambú natural.</p>
-             <p>Precio: S/. 35.00</p>
-             <button>Añadir al Carrito</button>
-        </div>
-        <div class="product">
-             <img src="img/reloj-madera.jpg" alt="Reloj de pared de madera reciclada" class="product-img">
-             <h3>Reloj de pared de madera </h3>
-             <p>Diseño elegante y minimalista hecho con madera reutilizada. Añade estilo y conciencia ecológica a tu hogar.</p>
-             <p>Precio: S/. 70.00</p>
-             <button>Añadir al Carrito</button>
-        </div>
-    </div>
-</div>
+  <div class="product-grid" id="product-grid"></div>></div>
+
+  <section class="ventajas">
+  <h2>¿Por qué elegirnos?</h2>
+  <ul>
+    <li>🌱 Sostenibilidad garantizada</li>
+    <li>🛠️ Productos 100% artesanales</li>
+    <li>🚚 Envíos a todo el país</li>
+    <li>❤️ Atención personalizada</li>
+  </ul>
+</section>
+  <!-- JavaScript al final -->
+  <script src="inicio.js" defer></script>
+  <footer class="footer">
+  <p>&copy; 2025 Crafthoria. Todos los derechos reservados.</p>
+  <p>
+    <a href="../CONTACTOS/contacto.html">Contacto</a> | 
+    <a href="#">Política de privacidad</a> | 
+    <a href="#">Términos y condiciones</a>
+  </p>
+</footer>
+
+</body>
+</html>
+
 
 

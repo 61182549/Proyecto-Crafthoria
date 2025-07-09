@@ -1,60 +1,144 @@
 body {
-    font-family: 'Arial', sans-serif; /* Herencia de fuente */
-    margin: 0; /* Sin margen alrededor del cuerpo */
-    padding: 0; /* Sin relleno alrededor del cuerpo */
-    background-color: #f5f5f5; /* Color de fondo */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f9f9f9, #f0ece7);
+  color: #333;
 }
 
-header {
-    background-color: #d8bba9; /* Fondo del encabezado */
-    padding: 20px; /* Espacio interno */
-    text-align: center; /* Texto centrado */
+/* Encabezado */
+.header {
+  background-color: #ffffff;
+  padding: 25px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-header h1 {
-    color: #200202; /* Color del texto del encabezado */
+.header h1 {
+  font-size: 2.5em;
+  color: #2e0e02;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
-div {
-    max-width: 400px; /* Ancho máximo del formulario */
-    margin: 50px auto; /* Centrar el formulario con márgenes automáticos */
-    padding: 20px; /* Espacio interno */
-    background-color: white; /* Fondo del formulario */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-h2 {
-    text-align: center; /* Centrar el título */
-    color: #200202; /* Color del título */
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #444;
+  font-size: 1.1em;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #200202;
+  color: white;
+}
+
+/* Registro */
+.registro-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.registro-container h2 {
+  color: #200202;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 label {
-    display: block; /* Mostrar la etiqueta como bloque */
-    margin-bottom: 5px; /* Espacio inferior de la etiqueta */
-    color: #333; /* Color de la etiqueta */
+  text-align: left;
+  font-weight: bold;
+  color: #444;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%; /* Ancho completo */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-bottom: 15px; /* Espacio inferior de los campos */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
 }
 
 button {
-    width: 100%; /* Ancho completo */
-    padding: 10px; /* Espaciado interno */
-    background-color: #d8bba9; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+  padding: 12px;
+  background-color: #7d7777;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #d8bba9; /* Color de fondo al pasar el cursor */
+  background-color: #200202;
+}
+
+.notificacion {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.notificacion.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #d9cfc0;
+  font-size: 0.95em;
+  color: #444;
+  margin-top: 60px;
+  border-top: 1px solid #ccc;
+}
+
+.footer a {
+  color: #444;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #200202;
 }

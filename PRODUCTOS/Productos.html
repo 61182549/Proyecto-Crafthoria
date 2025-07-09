@@ -3,79 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Crafthoria - Nuevos Productos</title>
+  <title>Crafthoria - Productos</title>
   <link rel="stylesheet" href="stylesProductos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="header">
     <h1>Crafthoria</h1>
     <div class="nav">
-      <a href="#">Inicio</a>
-      <a href="#">Productos</a>
-      <a href="#">Personalización</a>
-      <a href="#">Blog</a>
-      <a href="#">Contacto</a>
+      <a href="../INICIO/inicio.html">Inicio</a>
+      <a href="../PRODUCTOS/productos.html">Productos</a>
+      <a href="../PERSONALIZACION/personalizacion.html">Personalización</a>
+      <a href="../BLOG/blog.html">Blog</a>
+      <a href="../CONTACTOS/contacto.html">Contacto</a>
+      <a href="../REGISTRO/registro.html">Registro</a>
     </div>
   </div>
 
+  <div class="banner">
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar productos...">
+      <button>Buscar</button>
+    </div>
+    <h2>NUESTROS PRODUCTOS DESTACADOS</h2>
+  </div>
   <div class="container">
-    <h2>Nuevos Productos</h2>
-    <div class="product-grid">
+    <h2>Explora Nuestra Colección</h2>
 
-      <div class="product">
-        <img src="https://dstilo.es/17288-big_default_2x/espejo-de-diseno-contemporaneo-con-marco-de-madera-ds263-4019.jpg" alt="Espejo con marco de madera" class="product-img">
-        <h3>Espejo con marco de madera</h3>
-        <p>Diseño contemporáneo en madera pulida. Aporta elegancia y amplitud a cualquier espacio.</p>
-        <p>Precio: S/ 95.00</p>
-        <button>Añadir al Carrito</button>
-      </div>
+<div class="filtro-categorias" style="text-align: center; margin-bottom: 20px;">
+  <label for="filtro-categoria">Filtrar por categoría:</label>
+  <select id="filtro-categoria">
+    <option value="todos">Todos</option>
+    <option value="madera">Madera</option>
+    <option value="bambu">Bambú</option>
+    <option value="metal">Metal</option>
+    <option value="textil">Textil</option>
+  </select>
+</div>
 
-      <div class="product">
-        <img src="https://oechsle.vteximg.com.br/arquivos/ids/20512470-800-800/image-8986891c218d4158a51a7aa12ba97973.jpg?v=638754267596100000" alt="Lámpara colgante de madera" class="product-img">
-        <h3>Cojin decorativo </h3>
-        <p>Estilo moderno, perfecta para muebles.</p>
-        <p>Precio: S/ 65.00</p>
-        <button>Añadir al Carrito</button>
-      </div>
 
-      <div class="product">
-        <img src="https://plazavea.vteximg.com.br/arquivos/ids/27177311-418-418/null.jpg" alt="Cajonera organizadora" class="product-img">
-        <h3>Caja de almacenamiento rústica</h3>
-        <p>Fabricada en madera envejecida. Ideal para organizar mantas, revistas o juguetes.</p>
-        <p>Precio: S/ 69.90</p>
-        <button>Añadir al Carrito</button>
-      </div>
-
-      <div class="product">
-        <img src="https://dbdzm869oupei.cloudfront.net/img/quadres/medium/34569.jpg" alt="Cuadro artístico rústico" class="product-img">
-        <h3>Cuadro artístico rústico</h3>
-        <p>Pintura abstracta montada sobre bastidor de madera. Perfecto para espacios creativos.</p>
-        <p>Precio: S/ 110.00</p>
-        <button>Añadir al Carrito</button>
-      </div>
-
-      <div class="product">
-        <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/8721158390233_1.jpg" alt="Portarretrato de madera" class="product-img">
-        <h3>cajonera organizadora de madera</h3>
-        <p>Práctica y decorativa. Ideal para escritorios, tocadores o salas de manualidades.</p>
-        <p>Precio: S/ 250.00</p>
-        <button>Añadir al Carrito</button>
-      </div>
-
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/61XKjKlk6fL._UF894,1000_QL80_.jpg" alt="Caja de almacenamiento rústica" class="product-img">
-        <h3>CPortavelas de madera</h3>
-        <p>Fabricada en madera ideal para decorar salas o mesas.</p>
-        <p>Precio: S/ 20.00</p>
-        <button>Añadir al Carrito</button>
-      </div>
-
+    <!-- Contenedor de productos -->
+    <div id="product-grid" class="product-grid">
+      <!-- JS insertará aquí los productos -->
     </div>
   </div>
+
+  <script src="productos.js" defer></script>
+
+  <!-- CARRITO LATERAL -->
+  <div id="carrito-lateral">
+   <h3>Carrito 🛒</h3>
+   <ul id="lista-carrito"></ul>
+   <p id="total">Total: S/. 0.00</p>
+   <button id="vaciar-carrito">Vaciar carrito</button>
+  </div>
+  <!-- BOTÓN FLOTANTE -->
+  <button id="toggle-carrito" title="Ver carrito">🛒</button>
+
+  <footer class="footer">
+  <p>&copy; 2025 Crafthoria. Todos los derechos reservados.</p>
+  <p>
+    <a href="../CONTACTOS/contacto.html">Contacto</a> | 
+    <a href="#">Política de privacidad</a> | 
+    <a href="#">Términos y condiciones</a>
+  </p>
+</footer>
 
 </body>
 </html>
-Añadir al Carrito</button>
-</div>
+
+
