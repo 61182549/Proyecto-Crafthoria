@@ -1,26 +1,28 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Crafthoria - Productos</title>
-  <link rel="stylesheet" href="stylesProductos.css">
+  <link rel="stylesheet" href="stylesproductos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- CABECERA -->
   <div class="header">
     <h1>Crafthoria</h1>
     <div class="nav">
-     <a href="../inicio/inicio.html">Inicio</a>
-     <a href="../productos/productos.html">Productos</a>
-     <a href="../personalizacion/personalizacion.html">Personalización</a>
-     <a href="../blog/blog.html">Blog</a>
-     <a href="../contactos/contacto.html">Contacto</a>
-     <a href="../registro/registro.html">Registro</a>
+     <a href="../inicio/inicio.html">inicio</a>
+     <a href="../productos/productos.html">productos</a>
+     <a href="../personalizacion/personalizacion.html">personalización</a>
+     <a href="../blog/blog.html">blog</a>
+     <a href="../contactos/contacto.html">contacto</a>
+     <a href="../registro/registro.html">registro</a>
     </div>
   </div>
 
+  <!-- BANNER CON BÚSQUEDA -->
   <div class="banner">
     <div class="search-bar">
       <input type="text" placeholder="Buscar productos...">
@@ -29,10 +31,11 @@
     <h2>NUESTROS PRODUCTOS DESTACADOS</h2>
   </div>
 
+  <!-- CONTENIDO -->
   <div class="container">
     <h2>Explora Nuestra Colección</h2>
 
-    <div class="filtro-categorias" style="text-align: center; margin-bottom: 20px;">
+    <div class="filtro-categorias">
       <label for="filtro-categoria">Filtrar por categoría:</label>
       <select id="filtro-categoria">
         <option value="todos">Todos</option>
@@ -43,16 +46,12 @@
       </select>
     </div>
 
-    <!-- Contenedor de productos -->
-    <div id="product-grid" class="product-grid">
-      <!-- JS insertará aquí los productos -->
-    </div>
+    <!-- Productos insertados por JS -->
+    <div id="product-grid" class="product-grid"></div>
   </div>
 
-  <script src="productos.js" defer></script>
-
   <!-- CARRITO LATERAL -->
-  <div id="carrito-lateral">
+  <div id="carrito-lateral" class="oculto">
     <h3>Carrito 🛒</h3>
     <ul id="lista-carrito"></ul>
     <p id="total">Total: S/. 0.00</p>
@@ -62,14 +61,8 @@
   <!-- BOTÓN FLOTANTE -->
   <button id="toggle-carrito" title="Ver carrito">🛒</button>
 
-  <footer class="footer">
-    <p>&copy; 2025 Crafthoria. Todos los derechos reservados.</p>
-    <p>
-      <a href="../CONTACTOS/contacto.html">Contacto</a> | 
-      <a href="#">Política de privacidad</a> | 
-      <a href="#">Términos y condiciones</a>
-    </p>
-  </footer>
+  <!-- JS -->
+  <script src="productos.js" defer></script>
 
 </body>
 </html>
