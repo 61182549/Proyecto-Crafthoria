@@ -9,18 +9,8 @@
 </head>
 <body>
 
-  <div class="header">
-    <h1>Crafthoria</h1>
-    <div class="nav">
-     <a href="../INICIO/inicio.html">Inicio</a>
-     <a href="../PRODUCTOS/productos.html">Productos</a>
-     <a href="../PERSONALIZACION/personalizacion.html">Personalización</a>
-     <a href="../BLOG/blog.html">Blog</a>
-     <a href="../CONTACTOS/contacto.html">Contacto</a>
-     <a href="../REGISTRO/registro.html">Registro</a>
-
-    </div>
-  </div>
+  <!-- NAV AUTOMÁTICO -->
+  <div class="header"></div>
 
   <div class="banner">
     <div class="search-bar">
@@ -29,20 +19,20 @@
     </div>
     <h2>NUESTROS PRODUCTOS DESTACADOS</h2>
   </div>
+
   <div class="container">
     <h2>Explora Nuestra Colección</h2>
 
-<div class="filtro-categorias" style="text-align: center; margin-bottom: 20px;">
-  <label for="filtro-categoria">Filtrar por categoría:</label>
-  <select id="filtro-categoria">
-    <option value="todos">Todos</option>
-    <option value="madera">Madera</option>
-    <option value="bambu">Bambú</option>
-    <option value="metal">Metal</option>
-    <option value="textil">Textil</option>
-  </select>
-</div>
-
+    <div class="filtro-categorias" style="text-align: center; margin-bottom: 20px;">
+      <label for="filtro-categoria">Filtrar por categoría:</label>
+      <select id="filtro-categoria">
+        <option value="todos">Todos</option>
+        <option value="madera">Madera</option>
+        <option value="bambu">Bambú</option>
+        <option value="metal">Metal</option>
+        <option value="textil">Textil</option>
+      </select>
+    </div>
 
     <!-- Contenedor de productos -->
     <div id="product-grid" class="product-grid">
@@ -50,26 +40,30 @@
     </div>
   </div>
 
-  <script src="productos.js" defer></script>
-
   <!-- CARRITO LATERAL -->
   <div id="carrito-lateral">
-   <h3>Carrito 🛒</h3>
-   <ul id="lista-carrito"></ul>
-   <p id="total">Total: S/. 0.00</p>
-   <button id="vaciar-carrito">Vaciar carrito</button>
+    <h3>Carrito 🛒</h3>
+    <ul id="lista-carrito"></ul>
+    <p id="total">Total: S/. 0.00</p>
+    <button id="vaciar-carrito">Vaciar carrito</button>
   </div>
+
   <!-- BOTÓN FLOTANTE -->
   <button id="toggle-carrito" title="Ver carrito">🛒</button>
 
+  <!-- FOOTER -->
   <footer class="footer">
-  <p>&copy; 2025 Crafthoria. Todos los derechos reservados.</p>
-  <p>
-    <a href="../CONTACTOS/contacto.html">Contacto</a> | 
-    <a href="#">Política de privacidad</a> | 
-    <a href="#">Términos y condiciones</a>
-  </p>
-</footer>
+    <p>&copy; 2025 Crafthoria. Todos los derechos reservados.</p>
+    <p>
+      <a href="../contactos/contacto.html">Contacto</a> | 
+      <a href="#">Política de privacidad</a> | 
+      <a href="#">Términos y condiciones</a>
+    </p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="productos.js" defer></script>
+  <script src="../nav.js" defer></script>
 
 </body>
 </html>
