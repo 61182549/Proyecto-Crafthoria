@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -9,8 +9,17 @@
 </head>
 <body>
 
-  <!-- MENÚ AUTOMÁTICO -->
-  <div class="header"></div>
+  <div class="header">
+    <h1>Crafthoria</h1>
+    <div class="nav">
+     <a href="../INICIO/inicio.html">Inicio</a>
+     <a href="../PRODUCTOS/productos.html">Productos</a>
+     <a href="../PERSONALIZACION/personalizacion.html">Personalización</a>
+     <a href="../BLOG/blog.html">Blog</a>
+     <a href="../CONTACTOS/contacto.html">Contacto</a>
+     <a href="../REGISTRO/registro.html">Registro</a>
+    </div>
+  </div>
 
   <div class="banner">
     <div class="search-bar">
@@ -34,11 +43,15 @@
       </select>
     </div>
 
+    <!-- Contenedor de productos -->
     <div id="product-grid" class="product-grid">
-      <!-- JS insertará los productos -->
+      <!-- JS insertará aquí los productos -->
     </div>
   </div>
 
+  <script src="productos.js" defer></script>
+
+  <!-- CARRITO LATERAL -->
   <div id="carrito-lateral">
     <h3>Carrito 🛒</h3>
     <ul id="lista-carrito"></ul>
@@ -46,20 +59,18 @@
     <button id="vaciar-carrito">Vaciar carrito</button>
   </div>
 
+  <!-- BOTÓN FLOTANTE -->
   <button id="toggle-carrito" title="Ver carrito">🛒</button>
 
   <footer class="footer">
     <p>&copy; 2025 Crafthoria. Todos los derechos reservados.</p>
     <p>
-      <a href="/Proyecto-Crafthoria/contactos/contacto.html">Contacto</a> | 
+      <a href="../CONTACTOS/contacto.html">Contacto</a> | 
       <a href="#">Política de privacidad</a> | 
       <a href="#">Términos y condiciones</a>
     </p>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script src="productos.js" defer></script>
-  <script src="/Proyecto-Crafthoria/nav.js" defer></script>
 </body>
 </html>
 
