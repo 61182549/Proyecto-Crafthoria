@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Redireccionando...</title>
-  <meta http-equiv="refresh" content="0; url=/registro/registro.html" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crafthoria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 10px;
+    }
+  </style>
 </head>
 <body>
-  <p>Redireccionando a la página de registro...</p>
+  <div class="container">
+    <h1>Bienvenido a Crafthoria</h1>
+    <p>Tu sitio web está funcionando correctamente.</p>
+    <a href="./registro/registro.html" class="btn">Ir a Registro</a>
+    <a href="./inicio/" class="btn">Ir a Inicio</a>
+  </div>
+
+  <script>
+    // Redirección automática después de 3 segundos
+    setTimeout(function() {
+      window.location.href = './registro/registro.html';
+    }, 3000);
+  </script>
 </body>
 </html>
-
