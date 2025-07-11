@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
 
-  // Detectar si es GitHub Pages
   const isGitHub = location.hostname.includes("github.io");
   const base = isGitHub ? "/Proyecto-Crafthoria/" : "";
 
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 });
-
 
 
 
