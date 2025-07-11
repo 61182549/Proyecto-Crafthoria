@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <title>Crafthoria</title>
-  <script>
-    window.location.href = './registro/registro.html';
-  </script>
 </head>
 <body>
   <p>Redireccionando a la página de registro...</p>
+  <script>
+    // Detecta si estamos en GitHub Pages o en Firebase
+    const isGitHub = location.hostname.includes("github.io");
+    const basePath = isGitHub ? "/Proyecto-Crafthoria/" : "/";
+    window.location.href = basePath + "REGISTRO/registro.html";
+  </script>
 </body>
 </html>
 
