@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
+  const host = location.hostname;
+  const isGitHub = host.includes("github.io");
+  const base = isGitHub ? "/Proyecto-Crafthoria/" : "/";
 
   if (nav) {
-    const base = location.hostname.includes("github.io")
-      ? "/Proyecto-Crafthoria/"
-      : "/";
-
     nav.innerHTML = `
       <a href="${base}inicio/inicio.html">Inicio</a>
       <a href="${base}productos/productos.html">Productos</a>
@@ -16,5 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 });
+
 
 
