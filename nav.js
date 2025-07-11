@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
 
-  const base = location.hostname.includes("github.io")
-    ? "/Proyecto-Crafthoria/"
-    : "/";
+  const isGitHub = location.hostname.includes("github.io");
+  const base = isGitHub ? "/Proyecto-Crafthoria/" : "";
 
   if (nav) {
     nav.innerHTML = `
@@ -16,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 });
+
+
 
 
 
