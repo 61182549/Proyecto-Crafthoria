@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "crafthoria-web"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }
