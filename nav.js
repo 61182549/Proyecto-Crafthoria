@@ -1,16 +1,20 @@
-const isGitHub = location.hostname.includes("github.io");
-const basePath = isGitHub ? "/Proyecto-Crafthoria/" : "";
-
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
+
   if (nav) {
+    const base = location.hostname.includes("github.io")
+      ? "/Proyecto-Crafthoria/"
+      : "/";
+
     nav.innerHTML = `
-      <a href="${basePath}INICIO/inicio.html">Inicio</a>
-      <a href="${basePath}PRODUCTOS/productos.html">Productos</a>
-      <a href="${basePath}PERSONALIZACION/personalizacion.html">Personalización</a>
-      <a href="${basePath}BLOG/blog.html">Blog</a>
-      <a href="${basePath}CONTACTOS/contacto.html">Contactos</a>
-      <a href="${basePath}REGISTRO/registro.html">Registro</a>
+      <a href="${base}inicio/inicio.html">Inicio</a>
+      <a href="${base}productos/productos.html">Productos</a>
+      <a href="${base}personalizacion/personalizacion.html">Personalización</a>
+      <a href="${base}blog/blog.html">Blog</a>
+      <a href="${base}contactos/contacto.html">Contactos</a>
+      <a href="${base}registro/registro.html">Registro</a>
     `;
   }
 });
+
+
