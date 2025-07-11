@@ -1,47 +1,41 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("registro-form");
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+// Tu configuración de Firebase (ya la usaste antes)
+const firebaseConfig = {
+  apiKey: "AIzaSyDGjySOMt3jY6fSJlLV9H4SU-NwYMTXYYM",
+  authDomain: "crafthoria-web.firebaseapp.com",
+  projectId: "crafthoria-web",
+  storageBucket: "crafthoria-web.appspot.com",
+  messagingSenderId: "1051661170618",
+  appId: "1:1051661170618:web:eb1c48fec1ae95efa0cf83"
+};
 
-    const nombre = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
+// Inicializar Firebase y Firestore
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-    if (!nombre || !email || !password || !confirmPassword) {
-      mostrarMensaje("Por favor, completa todos los campos.");
-      return;
-    }
+// Manejar el formulario
+document.getElementById("form-contacto").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    if (password !== confirmPassword) {
-      mostrarMensaje("Las contraseñas no coinciden.");
-      return;
-    }
+  const nombre = document.getElementById("nombre").value;
+  const email = document.getElementById("email").value;
+  const mensaje = document.getElementById("mensaje").value;
 
-    // Si todo está OK
-    mostrarMensaje("✅ ¡Registro exitoso!", true);
+  try {
+    await addDoc(collection(db, "mensajes"), {
+      nombre,
+      email,
+      mensaje,
+      fecha: new Date().toISOString()
+    });
 
-    setTimeout(() => {
-      window.location.href = "../INICIO/inicio.html";
-    }, 2500);
-  });
-
-  function mostrarMensaje(texto, exito = false) {
-    const noti = document.createElement("div");
-    noti.className = "notificacion";
-    noti.textContent = texto;
-
-    if (exito) noti.style.backgroundColor = "#28a745";
-    else noti.style.backgroundColor = "#d9534f";
-
-    document.body.appendChild(noti);
-    setTimeout(() => noti.classList.add("visible"), 100);
-
-    setTimeout(() => {
-      noti.classList.remove("visible");
-      setTimeout(() => noti.remove(), 400);
-    }, 3000);
+    document.getElementById("confirmacion").classList.remove("oculto");
+    document.getElementById("form-contacto").reset();
+  } catch (error) {
+    console.error("❌ Error al enviar mensaje:", error);
+    alert("Hubo un problema al enviar tu mensaje.");
   }
 });
 
