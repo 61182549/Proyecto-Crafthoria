@@ -2,8 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/Proyecto-Crafthoria/REGISTRO/registro.html" />
     <title>Redireccionando...</title>
+    <script>
+      const isGitHub = location.hostname.includes("github.io");
+      const basePath = isGitHub ? "/Proyecto-Crafthoria/" : "";
+      location.href = basePath + "REGISTRO/registro.html";
+    </script>
   </head>
   <body>
     <p>Redireccionando a la página de registro...</p>
